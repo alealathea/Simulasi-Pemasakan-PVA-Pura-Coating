@@ -184,9 +184,9 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
     }
 
     # Tampilan Laporan Header
-    st.info(f"⏳ **MENGAWAL SIMULASI...**\n\n"
+    st.info(f"⏳ **MENJALANKAN SIMULASI...**\n\n"
             f"📦 **INPUT:** {pva_input_raw} kg {pilihan_pva} | {air_input_raw} kg Air Awal (Flowmeter)\n\n"
-            f"🔬 **Material Aktif:** Tslip={Tslip_aktif}°C, Tevap={Tevap_aktif}°C\n\n"
+            f"🔬 **Parameter Material:** Tslip={Tslip_aktif}°C, Tevap={Tevap_aktif}°C\n\n"
             f"📊 **Data Output:** {pilihan_output_data_type} ({pilihan_data_source})")
     
     # Siapkan Figure Plot
@@ -237,7 +237,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
 
             # Tulis Hasil ke Layar Streamlit
             with hasil_cols[idx]:
-                st.markdown(f"**🔹 {lbl.upper()}** (Steam: {ds}, x: {xs})")
+                st.markdown(f"**🔹 {lbl.upper()}** (Laju Steam: {ds}, Fraksi Steam: {xs})")
                 if pilihan_output_data_type == 'Solid':
                     st.write(f"➜ Kadar Solid: **{solid_akhir_persen:.2f} %**")
                 else:
@@ -280,6 +280,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
