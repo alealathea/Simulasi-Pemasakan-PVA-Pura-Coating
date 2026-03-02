@@ -129,6 +129,10 @@ st.set_page_config(page_title="Simulator PVA", page_icon="⚙️", layout="wide"
 
 st.title("⚙️ Simulator Pemasakan PVA")
 st.markdown("Aplikasi Prediksi Waktu, Total Air Akhir, dan Kadar Solid PVA.")
+st.sidebar.image("logo_pura.png", width=200)
+st.sidebar.markdown("---")
+st.sidebar.write("Divisi Process Engineering")
+st.sidebar.write("PT Pura Coating and Adhesive")
 st.markdown("---")
 
 col1, col2, col3 = st.columns(3)
@@ -275,3 +279,4 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
