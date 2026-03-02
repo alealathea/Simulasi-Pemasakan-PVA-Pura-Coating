@@ -139,7 +139,7 @@ st.markdown("---")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    pilihan_pva = st.selectbox('Tipe Bahan PVA:', ['PVA 1788', 'PVA BP17a'])
+    pilihan_pva = st.selectbox('Tipe Bahan PVA:', ['PVA 1788a', 'PVA BP17a'])
     pva_input_raw = st.number_input('Jumlah PVA (kg):', min_value=1.0, value=100.0, step=10.0)
     air_input_raw = st.number_input('Jumlah Air Awal (kg) [Flowmeter]:', min_value=1.0, value=500.0, step=10.0)
 
@@ -166,7 +166,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
     # Perhitungan Awal
     air_ril = air_input_raw * 1.128326652
 
-    if pilihan_pva == 'PVA 1788':
+    if pilihan_pva == 'PVA 1788a':
         Tslip_aktif, Tevap_aktif = Tslip1, Tevap1
         SolidPVA = 0.953068592
     else: # PVA BP17a
@@ -280,6 +280,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
