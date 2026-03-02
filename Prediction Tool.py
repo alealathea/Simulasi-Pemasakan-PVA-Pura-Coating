@@ -144,7 +144,7 @@ with col1:
     air_input_raw = st.number_input('Jumlah Air Awal (kg) [Flowmeter]:', min_value=1.0, value=500.0, step=10.0)
 
 with col2:
-    pilihan_boiler = st.selectbox('Kondisi Boiler:', [
+    pilihan_boiler = st.selectbox('Kondisi Steam:', [
         '1. Loyo (Low Pressure)',
         '2. Normal (Rata-rata)',
         '3. Ngebut (High Pressure)',
@@ -154,7 +154,7 @@ with col2:
 
 with col3:
     pilihan_output_data_type = st.selectbox('Tipe Data Output Grafik:', ['Massa Air', 'Solid'])
-    pilihan_data_source = st.selectbox('Kondisi Data (Fase):', ['Pemasakan', 'Setelah Pendinginan'])
+    pilihan_data_source = st.selectbox('Kondisi Data:', ['Saat Pemasakan', 'Setelah Pendinginan'])
 
 st.markdown("---")
 
@@ -223,7 +223,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
             Solid_new = hasil[4]
 
             # Seleksi Data
-            if pilihan_data_source == 'Pemasakan':
+            if pilihan_data_source == 'Saat Pemasakan':
                 current_mair_data = mair_sim
                 current_solid_data = Solid_sim
             else:
@@ -280,6 +280,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
