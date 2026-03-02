@@ -127,7 +127,7 @@ def calapp (mtota,mpvaa,Tinit,bukaan1,bukaan2,deltasteam,Tslip,Tevap,xsteam,UA,m
 # ==========================================
 st.set_page_config(page_title="Simulator PVA", page_icon="⚙️", layout="wide")
 
-st.title("⚙️ Simulator Pemasakan PVA Interaktif")
+st.title("⚙️ Simulator Pemasakan PVA")
 st.markdown("Aplikasi Prediksi Waktu, Total Air Akhir, dan Kadar Solid PVA.")
 st.markdown("---")
 
@@ -273,4 +273,5 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
 
     except Exception as e:
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
+
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
