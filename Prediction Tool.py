@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar  2 09:02:25 2026
-
-@author: aleal
-"""
-
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
@@ -280,6 +273,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
