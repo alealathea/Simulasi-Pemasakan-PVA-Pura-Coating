@@ -125,8 +125,9 @@ def calapp (mtota,mpvaa,Tinit,bukaan1,bukaan2,deltasteam,Tslip,Tevap,xsteam,UA,m
 # ==========================================
 # 3. DESAIN ANTARMUKA UI STREAMLIT
 # ==========================================
-st.set_page_config(page_title="Simulator PVA", page_icon="⚙️", layout="wide")
+st.set_page_config(page_title="Simulator PVA", page_icon="Logo Pura Group.png", layout="wide")
 
+st.image("Logo Pura Group.png", width=250)
 st.title("⚙️ Simulator Pemasakan PVA")
 st.markdown("Aplikasi Prediksi Waktu, Total Air Akhir, dan Kadar Solid PVA.")
 st.sidebar.image("Logo Pura Group.png", width=200)
@@ -279,5 +280,6 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
