@@ -122,7 +122,7 @@ st.set_page_config(page_title="Simulator PVA", page_icon="Logo Pura No Text.png"
 
 st.image("Logo Pura Group.png", width=250)
 st.title("⚙️ PVA-CAST")
-st.markdown("PVA COOKING ANALYSIS AND SIMULATION TOOL")
+st.markdown("PVA Cooking Analysis and Simulation Tool")
 st.sidebar.image("Logo Pura Group.png", width=200)
 st.sidebar.markdown("---")
 st.sidebar.write("Research and Development")
@@ -273,6 +273,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
