@@ -147,7 +147,7 @@ with col2:
 
 with col3:
     pilihan_output_data_type = st.selectbox('Tipe Data Output Grafik:', ['Massa Air', 'Solid'])
-    pilihan_data_source = st.selectbox('Kondisi Data:', ['Saat Pemasakan', 'Setelah Pendinginan'])
+    pilihan_data_source = st.selectbox('Kondisi Data:', ['Saat Pemasakan', 'Setelah Dingin'])
 
 st.markdown("---")
 
@@ -273,6 +273,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
