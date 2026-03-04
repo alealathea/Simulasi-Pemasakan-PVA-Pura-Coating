@@ -230,7 +230,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
 
             # Tulis Hasil ke Layar Streamlit
             with hasil_cols[idx]:
-                st.markdown(f"**🔹 {lbl.upper()}** (Laju Steam: {ds}, Fraksi Steam: {xs})")
+                st.markdown(f"**🔹 {lbl.upper()}** (Laju Steam: {ds} kg/menit, Fraksi Steam: {xs})")
                 if pilihan_output_data_type == 'Solid':
                     st.write(f"➜ Kadar Solid: **{solid_akhir_persen:.2f} %**")
                 else:
@@ -273,6 +273,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
