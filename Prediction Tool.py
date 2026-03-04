@@ -251,7 +251,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
 
         # Plot Garis Target Water (Jika Massa Air dipilih)
         if pilihan_output_data_type == 'Massa Air':
-            ax1.plot(np.linspace(0, input_max_time, 100), np.full(100, targetwater), color='blue', linestyle='--', linewidth=2.5, label="Target Water")
+            ax1.plot(np.linspace(0, input_max_time, 100), np.full(100, targetwater), color='blue', linestyle='--', linewidth=2.5, label="Target Air")
 
         plt.title(f"Kurva Prediksi Pemasakan ({pilihan_pva})", fontweight='bold')
         plt.grid(True, alpha=0.3, linestyle='--')
@@ -273,6 +273,7 @@ if st.button('🚀 Jalankan Simulasi', use_container_width=True):
         st.error(f"❌ Terjadi kesalahan perhitungan: {e}")
 
         st.warning("Pastikan Anda sudah mem-paste fungsi 'calapp' dengan benar di bagian atas kode.")
+
 
 
 
